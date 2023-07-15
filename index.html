@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html class="scroll-smooth">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -12,255 +12,477 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': "#003566"
-                    },
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="tailwind-config.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <style>
+        #progress-bar {
+            --progress: 0;
+        }
+
+        #progress-bar::before {
+            width: var(--progress);
+        }
+
+        #hero-vid {
+            clip-path: polygon(80% 0, 100% 30%, 100% 100%, 0 100%, 0 0);
+        }
+
+        .bg-hero-bg {
+            background-image: radial-gradient(#A9D9D0, transparent 70%);
+        }
+    </style>
 </head>
 
-<body class="font-inter text-[#262626]">
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+<body>
 
-    <nav
-        class="text-sm w-full z-20 fixed bg-white border-b-2 border-primary top-0 inline-x flex justify-between items-center text-[#262626] px-8 py-3">
-        <a href="#hero"
-            class="text-2xl tracking-tighter font-bold underline underline-offset-2 decoration-transparent hover:decoration-primary transition ease-all">Newstar
-            Consulting</a>
-        <div class="hidden md:flex gap-6">
-            <a href="#hero"
-                class="underline underline-offset-2 decoration-transparent hover:decoration-primary transition ease-all">Home</a>
-            <a href="about.html"
-                class="underline underline-offset-2 decoration-transparent hover:decoration-primary transition ease-all">About
-                Us</a>
-            <a href="#specialities"
-                class="underline underline-offset-2 decoration-transparent hover:decoration-primary transition ease-all">Our
-                Specialities</a>
-            <a href="contact.html"
-                class="underline underline-offset-2 decoration-transparent hover:decoration-primary transition ease-all">Contact
-                Us</a>
-        </div>
-        <div class="flex gap-2">
-            <a href="https://www.linkedin.com/company/newstar-consulting/"
-                class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#262626] hover:border-transparent hover:bg-[#0077B5] hover:text-white transition ease-all">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#"
-                class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#262626] hover:border-transparent hover:bg-[#4267B2] hover:text-white transition ease-all">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#"
-                class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#262626] hover:border-transparent hover:bg-[#1DA1F2] hover:text-white transition ease-all">
-                <i class="fab fa-twitter"></i>
-            </a>
-        </div>
-    </nav>
-
-    <section id="hero" class="px-8 md:px-32 pt-28 pb-16 bg-hero-pattern">
-        <h1
-            class="text-5xl md:text-6xl font-extrabold tracking-tighter underline underline-offset-4 decoration-primary">
-            Newstar Consulting</h1>
-        <h3 class="text-3xl md:text-4xl font-bold tracking-tighter pt-4 pb-6">We are in People Business</h3>
-        <video nocontrols loop autoplay class="h-96 w-full object-cover">
-            <source src="lib/hero-vid.mp4">
-        </video>
-    </section>
-
-    <div class="flex justify-end pb-4 md:px-32 px-8">
-        <hr class="w-4/6 border-4 border-primary">
-    </div>
-
-    <section id="about" class="px-8 py-12 md:px-40 relative">
-        <span
-            class="absolute top-0 left-0 pt-10 pl-10 uppercase font-black tracking-wider opacity-20 text-primary text-9xl z-[-10] w-full overflow-hidden">about
-            us</span>
-        <div class="flex flex-col py-8 md:flex-row gap-6 items-start">
-            <div class="w-full md:w-3/5">
-                <h2 class="text-5xl font-extrabold tracking-tighter pb-2">About Us</h2>
-                <h4 class="text-3xl font-semibold tracking-tighter py-4">Helping Businesses grow since 1997</h4>
-                <p class="text-[#444445]">We are a team of dedicated professionals who are committed to helping
-                    businesses find the best talent to meet their needs. Our mission is to match skilled and qualified
-                    candidates with employers who are seeking top talent to grow their businesses.<br><br>
-                    At our recruitment firm, we believe that the key to success is in finding the right people for the
-                    right roles. We take a personalized approach to our work, taking the time to get to know both our
-                    clients and candidates so that we can create meaningful connections that lead to long-lasting
-                    professional relationships.<br><br>
-                    <a href="about.html"
-                        class="p-2 px-4 bg-primary/80 text-white rounded-md text-sm hover:bg-primary transition ease-all shadow-md shadow-primary/10">
-                        Read more...</a>
-                </p>
-            </div>
-            <img src="lib/about.png" class="w-full md:w-2/5">
-        </div>
-    </section>
-
-    <section id="specialities" class="px-8 py-12 md:px-40 relative text-center bg-primary z-[-20] text-white">
-        <span
-            class="absolute top-0 left-0 pt-10 uppercase font-black tracking-wider text-white/20 text-9xl z-[-10] w-full overflow-hidden">
-            Our specialities</span>
-        <h2 class="text-5xl font-extrabold tracking-tighter pt-6 pb-4">Our Specialities</h2>
-        <p class="pb-6">
-            We specialize in a wide range of industries:
-        </p>
-        <div class="md:px-32 flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2">
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-desktop text-2xl py-1"></i>
-                <br>
-                Information Technology
-            </div>
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-money-bill-wave text-2xl py-1"></i>
-                <br>
-                Finance and Accounting
-            </div>
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-cogs text-2xl py-1"></i>
-                <br>
-                Engineering
-            </div>
-        </div>
-        <div class="md:px-32 flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2">
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-cash-register text-2xl py-1"></i>
-                <br>
-                Sales & Marketing
-            </div>
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-users text-2xl py-1"></i>
-                <br>
-                Human Resources
-            </div>
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-stethoscope text-2xl py-1"></i>
-                <br>
-                Healthcare
-            </div>
-        </div>
-        <div class="md:px-32 flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2">
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-books text-2xl py-1"></i>
-                <br>
-                Education
-            </div>
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-store text-2xl py-1"></i>
-                <br>
-                E-commerce
-            </div>
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-car-side text-2xl py-1"></i>
-                <br>
-                Automobile
-            </div>
-        </div>
-        <div class="md:px-32 flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2">
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-building text-2xl py-1"></i>
-                <br>
-                Infrastructure
-            </div>
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-user text-2xl py-1"></i>
-                <br>
-                Life sciences & Healthcare
-            </div>
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-film text-2xl py-1"></i>
-                <br>
-                Media & Advertising
-            </div>
-        </div>
-        <div class="md:px-32 flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2">
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-info-circle text-2xl py-1"></i>
-                <br>
-                Retail
-            </div>
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-plug text-2xl py-1"></i>
-                <br>
-                Power & Energy
-            </div>
-            <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30">
-                <i class="fas fa-shopping-cart text-2xl py-1"></i>
-                <br>
-                FMCG
-            </div>
-        </div>
-    </section>
-
-    <section id="outro" class="px-8 py-12 md:px-40">
-        <div class="flex flex-col md:flex-row gap-12 items-center py-6">
-            <div class="flex-1">
-                <h1 class="font-bold tracking-tighter text-4xl">Employers</h1>
-                <p class="py-4 text-[#444445]">If you are an employer looking to find top talent, we invite you to
-                    connect with us. Let us help you achieve your goals and take your business to the next level.
-                    Contact us today to learn more about our services and how we can help you succeed.</p>
-                <a href="contact.html"
-                    class="p-2 px-4 bg-primary/80 text-white rounded-md text-sm hover:bg-primary transition ease-all shadow-md shadow-primary/10">Contact
-                    Us</a>
-            </div>
-            <div class="flex-1">
-                <img src="lib/employers.png">
-            </div>
-        </div>
-        <div class="flex flex-col md:flex-row-reverse gap-12 items-center py-6">
-            <div class="flex-1">
-                <h1 class="font-bold tracking-tighter text-4xl">Job Seekers</h1>
-                <p class="py-4 text-[#444445]">For job seekers, we offer a personalized approach to finding their next
-                    career opportunity. We take the time to understand their skills, experience, and career goals, and
-                    we match them with job openings that align with their interests and strengths. We provide guidance
-                    and support throughout the hiring process, from resume building to interview preparation and offer
-                    negotiation.</p>
-                <a href="contact.html"
-                    class="p-2 px-4 bg-primary/80 text-white rounded-md text-sm hover:bg-primary transition ease-all shadow-md shadow-primary/10">Contact
-                    Us</a>
-            </div>
-            <div class="flex-1">
-                <img src="lib/jobseekers.png">
-            </div>
-        </div>
-    </section>
-
-    <section id="footer" class="px-8 py-12 md:px-40 bg-primary text-white">
-        <div class="text-sm border-b-2 border-white/50 top-0 inline-x flex justify-between items-center px-8 py-3">
-            <a href="#hero"
-                class="text-2xl tracking-tighter font-bold underline underline-offset-2 decoration-transparent hover:decoration-white/50 transition ease-all">Newstar
+    <div class="font-inter text-sm w-full z-30 fixed bg-light top-0 inline-x">
+        <nav class="flex justify-between items-center px-8 py-3">
+            <a href="#home"
+                class="text-2xl tracking-tighter font-bold underline underline-offset-2 decoration-transparent hover:decoration-primary transition ease-all">Newstar
                 Consulting</a>
+            <div class="hidden md:flex gap-6">
+                <a href="#home"
+                    class="underline underline-offset-2 decoration-transparent hover:decoration-primary transition ease-all">Home</a>
+                <a href="#about"
+                    class="underline underline-offset-2 decoration-transparent hover:decoration-primary transition ease-all">About
+                    Us</a>
+                <a href="#specialities"
+                    class="underline underline-offset-2 decoration-transparent hover:decoration-primary transition ease-all">Our
+                    Specialities</a>
+                <a href="#services"
+                    class="underline underline-offset-2 decoration-transparent hover:decoration-primary transition ease-all">Our
+                    Services</a>
+                <a href="#contact"
+                    class="underline underline-offset-2 decoration-transparent hover:decoration-primary transition ease-all">Contact
+                    Us</a>
+            </div>
             <div class="flex gap-2">
                 <a href="https://www.linkedin.com/company/newstar-consulting/"
-                    class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white hover:border-transparent hover:bg-white hover:text-primary transition ease-all">
+                    class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-dark hover:border-transparent hover:bg-[#0077B5] hover:text-white transition ease-all">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
                 <a href="#"
-                    class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white hover:border-transparent hover:bg-white hover:text-primary transition ease-all">
+                    class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-dark hover:border-transparent hover:bg-[#4267B2] hover:text-white transition ease-all">
                     <i class="fab fa-facebook-f"></i>
                 </a>
                 <a href="#"
-                    class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white hover:border-transparent hover:bg-white hover:text-primary transition ease-all">
+                    class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-dark hover:border-transparent hover:bg-[#1DA1F2] hover:text-white transition ease-all">
                     <i class="fab fa-twitter"></i>
                 </a>
             </div>
+        </nav>
+        <div id="progress-bar"
+            class="h-[5px] relative w-full before:absolute z-40 before:z-30 before:block before:h-[5px] before:content-[''] before:bg-secondary bg-gray-300">
         </div>
-        <p class="text-sm text-center pt-4">Copyright © 2023 Newstar Consulting Pvt Ltd - All Rights Reserved.</p>
-    </section>
+    </div>
 
+    <main
+        class="font-inter text-dark bg-light h-screen overflow-y-scroll overflow-x-hidden md:snap-y snap-proximity scroll-smooth">
+
+        <section id='home' class='snap-center'>
+            <div class="min-h-screen flex flex-col md:flex-row md:justify-between justify-center items-center px-8 md:px-40 py-24 relative">
+                <div class="absolute z-10 h-[28rem] w-[28rem] bg-hero-bg -right-48 md:right-[28rem]"></div>
+                <div class="z-20">
+                    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter underline underline-offset-4 decoration-primary">
+                        Newstar Consulting</h1>
+                    <h3 class="text-3xl md:text-4xl font-bold tracking-tighter py-4">We are in People Business</h3>
+                    <div class="flex flex-col md:flex-row gap-6 md:gap-1.5">
+                        <div>
+                            <a class="border-2 text-[#444445] border-gray-400 rounded-full p-2 px-4 transition my-4 duration-300 ease-in-out hover:border-primary hover:text-dark"
+                                href="#about">About Us</a>
+                            <a class="border-2 text-[#444445] border-gray-400 rounded-full p-2 px-4 transition my-4 duration-300 ease-in-out hover:border-primary hover:text-dark"
+                                href="#specialities">Our Specialities</a>
+                        </div>
+                        <div>
+                            <a class="border-2 text-[#444445] border-gray-400 rounded-full p-2 px-4 transition my-4 duration-300 ease-in-out hover:border-primary hover:text-dark"
+                                href="#services">Our Services</a>
+                            <a class="border-2 text-[#444445] border-gray-400 rounded-full p-2 px-4 transition my-4 duration-300 ease-in-out hover:border-primary hover:text-dark"
+                                href="#contact">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <video nocontrols autoplay muted loop
+                    class="before:content-[''] h-44 md:h-[28rem] w-full md:w-2/5 my-6 z-20 object-cover rounded-md" id="hero-vid">
+                    <source src="lib/hero-vid.mp4">
+                </video>
+            </div>
+        </section>
+
+        <div class="flex justify-end pb-4 md:px-32 px-8">
+            <hr class="w-4/6 border-4 border-secondary">
+        </div>
+
+        <section id='about' class='snap-start'>
+            <div class="min-h-screen py-16 px-8 md:px-40 flex flex-col justify-center items-center">
+                <div class="flex flex-col py-8 md:flex-row gap-6 items-center relative">
+                    <span
+                        class="absolute top-0 -left-8 md:-left-20 uppercase font-black tracking-wider text-halftone/40 text-9xl z-10 w-screen overflow-hidden">
+                        about us</span>
+                    <div class="w-full md:w-3/5 z-20">
+                        <h2 class="text-5xl font-extrabold tracking-tighter pb-2">About Us</h2>
+                        <h4 class="text-3xl font-semibold tracking-tighter py-4">Helping Businesses grow since 1997</h4>
+                        <p class="text-[#444445]">We are a team of dedicated professionals who are committed to helping
+                            businesses find the best talent to meet their needs. Our mission is to match skilled and
+                            qualified candidates with employers who are seeking top talent to grow their businesses.
+                            <br><br>
+                            At our recruitment firm, we believe that the key to success is in finding the right people
+                            for the right roles. We take a personalized approach to our work, taking the time to get to
+                            know both our clients and candidates so that we can create meaningful connections that lead
+                            to long-lasting professional relationships.
+                            <br><br>
+                            Our team is made up of experienced recruiters who have a deep understanding of the job
+                            market and the needs of employers across a range of industries. We use our expertise to
+                            identify and attract the most qualified candidates, and we work closely with our clients to
+                            ensure that their hiring needs are met quickly and efficiently.
+                            <br><br>
+                            We pride ourselves on our commitment to professionalism and integrity in all of our work. We
+                            believe in being transparent and honest with both our clients and candidates, and we always
+                            operate with the highest standards of ethical behavior.
+                            <br><br>
+                            If you are a business looking for top talent, or a candidate seeking a new opportunity, we
+                            invite you to partner with our recruitment firm. Together, we can help you achieve your
+                            professional goals and take your career or business to the next level.
+                        </p>
+                    </div>
+                    <img src="lib/about.png" class="w-full md:w-2/5">
+                </div>
+                <img src="lib/about2.png" class="h-48 w-full object-cover my-8">
+                <div class="flex flex-col py-6 md:flex-row gap-8 items-center">
+                    <h1 class="md:w-2/5 font-semibold text-3xl tracking-tighter">Helping you solve your staffing and
+                        workforce challenges.</h1>
+                    <p class="text-[#444445] md:w-3/5">
+                        In today's fast-paced business world, staffing and workforce challenges can be a major obstacle
+                        for companies of all sizes. Whether you're struggling with recruitment, retention, or employee
+                        productivity, it can be difficult to find the right solutions to your staffing needs.
+                        Fortunately,
+                        in calm or chaos, you can count on us for guidance to create strategies that you can use to
+                        address
+                        these challenges and build a strong, effective workforce.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="specialities" class="snap-start">
+            <div
+                class="min-h-screen py-16 px-8 md:px-40 flex flex-col justify-center items-center bg-secondary text-light relative">
+                <span
+                    class="absolute text-center top-16 left-0 uppercase font-black tracking-wider text-halftone/30 text-9xl z-10 w-screen overflow-hidden">
+                    Our specialities</span>
+                <h2 class="text-5xl font-extrabold tracking-tighter pt-6 pb-4 z-20">Our Specialities</h2>
+                <p class="pb-6 z-20">
+                    We specialize in a wide range of industries:
+                </p>
+
+                <div class="w-full flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2 md:px-32 z-20">
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-desktop text-2xl py-1"></i>
+                        <br>
+                        Information Technology
+                    </div>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-money-bill-wave text-2xl py-1"></i>
+                        <br>
+                        Finance and Accounting
+                    </div>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-cogs text-2xl py-1"></i>
+                        <br>
+                        Engineering
+                    </div>
+                </div>
+                <div class="w-full flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2 md:px-32">
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-cash-register text-2xl py-1"></i>
+                        <br>
+                        Sales & Marketing
+                    </div>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-users text-2xl py-1"></i>
+                        <br>
+                        Human Resources
+                    </div>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-stethoscope text-2xl py-1"></i>
+                        <br>
+                        Healthcare
+                    </div>
+                </div>
+                <div class="w-full flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2 md:px-32">
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-books text-2xl py-1"></i>
+                        <br>
+                        Education
+                    </div>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-store text-2xl py-1"></i>
+                        <br>
+                        E-commerce
+                    </div>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-car-side text-2xl py-1"></i>
+                        <br>
+                        Automobile
+                    </div>
+                </div>
+                <div class="w-full flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2 md:px-32">
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-building text-2xl py-1"></i>
+                        <br>
+                        Infrastructure
+                    </div>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-user text-2xl py-1"></i>
+                        <br>
+                        Life sciences & Healthcare
+                    </div>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-film text-2xl py-1"></i>
+                        <br>
+                        Media & Advertising
+                    </div>
+                </div>
+                <div class="w-full flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2 md:px-32">
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-info-circle text-2xl py-1"></i>
+                        <br>
+                        Retail
+                    </div>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-plug text-2xl py-1"></i>
+                        <br>
+                        Power & Energy
+                    </div>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
+                        <i class="fas fa-shopping-cart text-2xl py-1"></i>
+                        <br>
+                        FMCG
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="snap-start">
+            <div class="min-h-screen flex flex-col justify-center items-center relative px-8 py-16 md:px-40">
+                <span
+                    class="absolute text-center top-16 left-0 uppercase font-black tracking-wider text-halftone/40 text-9xl z-10 w-screen overflow-hidden">
+                    services</span>
+                <h2 class="text-5xl font-extrabold tracking-tighter pt-8 pb-4 text-center z-20">Services</h2>
+                <div class="flex flex-col md:flex-row gap-12 items-center py-6">
+                    <div class="flex-1">
+                        <h1 class="font-bold tracking-tighter text-4xl">Permanent Hiring</h1>
+                        <p class="py-4 text-[#444445]">
+                            Looking for a long-term solution to your hiring needs? <br><br>
+                            Our permanent hiring solutions are designed to help you find the best talent for your
+                            organization, without the hassle of going through the recruitment process yourself. <br><br>
+                            Our team of experienced recruiters will work closely with you to understand your business
+                            needs and identify the right candidates for your organization. We have access to a wide
+                            network of job seekers, and we use cutting-edge recruitment technologies to ensure that we
+                            find the best match for your company.
+                        </p>
+                    </div>
+                    <div class="flex-1">
+                        <img src="lib/permanenthiring.webp">
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse gap-12 items-center py-6">
+                    <div class="flex-1">
+                        <h1 class="font-bold tracking-tighter text-4xl">Recruitment Process Outsourcing</h1>
+                        <p class="py-4 text-[#444445]">
+                            Recruitment can be a challenging task for any organization, especially when they have to
+                            compete with other companies to attract and retain top talent. That's where our RPO service
+                            comes in. Our RPO service involves us becoming an extension of your HR team, providing you
+                            with a dedicated recruitment team that is fully committed to delivering high-quality
+                            candidates in a timely and efficient manner. We have a deep understanding of the recruitment
+                            landscape and can leverage the latest technology, social media, and job boards to reach a
+                            wider pool of candidates.
+                        </p>
+                    </div>
+                    <div class="flex-1">
+                        <img src="lib/recruitmentprocessoutsourcing.webp">
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-12 items-center py-6">
+                    <div class="flex-1">
+                        <h1 class="font-bold tracking-tighter text-4xl">Vendor On Premise</h1>
+                        <p class="py-4 text-[#444445]">
+                            A vendor on premise (VOP) is a service in which we provide a recruiter who works on-site at
+                            your location to manage your hiring needs. VOP is an attractive option for organizations
+                            that require streamlining their recruitment process. Our VOP services can be a valuable
+                            addition to your business. It enables us to work closely with clients, understand their
+                            hiring needs, and provide them with a tailored solution. VOP recruiters can be trained to
+                            specialize in the client's industry and possess an in-depth understanding of the client's
+                            culture, ensuring that the right candidates are sourced and placed within the organization.
+                        </p>
+                    </div>
+                    <div class="flex-1">
+                        <img src="lib/vendoronpremise.webp">
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse gap-12 items-center py-6">
+                    <div class="flex-1">
+                        <h1 class="font-bold tracking-tighter text-4xl">Executive Search</h1>
+                        <p class="py-4 text-[#444445]">
+                            Executive search is a specialized recruitment service that focuses on identifying and
+                            recruiting top-level executives for organizations. At its core, executive search is about
+                            finding the right candidate with the right skillset and experience to lead an organization
+                            or department.<br><br>
+                            At our recruitment agency, we understand the importance of executive search and we have a
+                            team of experienced recruiters who specialize in this area. Our executive search services
+                            are tailored to meet the needs of each client, and we work closely with them to understand
+                            their requirements and expectations.
+                        </p>
+                    </div>
+                    <div class="flex-1">
+                        <img src="lib/executivesearch.webp">
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-12 items-center py-6">
+                    <div class="flex-1">
+                        <h1 class="font-bold tracking-tighter text-4xl">Employers</h1>
+                        <p class="py-4 text-[#444445]">If you are an employer looking to find top talent, we invite you
+                            to connect with us. Let us help you achieve your goals and take your business to the next
+                            level.<br><br>
+                            Contact us today to learn more about our services and how we can help you succeed.</p>
+                        <a href="#contact"
+                            class="p-2 block md:w-max px-4 bg-primary/80 text-white rounded-md text-sm hover:bg-primary transition ease-all shadow-md shadow-primary/10">Looking
+                            for a recruitment partner?</a>
+                    </div>
+                    <div class="flex-1">
+                        <img src="lib/employers.png">
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse gap-12 items-center py-6">
+                    <div class="flex-1">
+                        <h1 class="font-bold tracking-tighter text-4xl">Job Seekers</h1>
+                        <p class="py-4 text-[#444445]">For job seekers, we offer a personalized approach to finding
+                            their next career opportunity. We take the time to understand their skills, experience, and
+                            career
+                            goals, and we match them with job openings that align with their interests and strengths. We
+                            provide
+                            guidance and support throughout the hiring process, from resume building to interview
+                            preparation and
+                            offer negotiation.</p>
+                        <a href="#contact"
+                            class="p-2 block md:w-max px-4 bg-primary/80 text-white rounded-md text-sm hover:bg-primary transition ease-all shadow-md shadow-primary/10">
+                            Looking for a great career move?</a>
+                    </div>
+                    <div class="flex-1">
+                        <img src="lib/jobseekers.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id='hiring' class='snap-start'>
+            <div
+                class="min-h-screen py-16 px-8 md:px-40 flex flex-col justify-center items-center bg-secondary text-light">
+                <div class="flex flex-col py-8 md:flex-row gap-12 items-start relative">
+                    <span
+                        class="absolute -top-4 -left-8 md:-left-20 uppercase font-black tracking-wider text-halftone/30 text-9xl z-10 w-screen overflow-hidden">
+                        hiring!</span>
+                    <div class="w-full md:w-1/2 z-20">
+                        <h2 class="text-5xl font-extrabold tracking-tighter pb-2">Our Clients Are Hiring!</h2>
+                        <h4 class="text-3xl font-semibold tracking-tighter py-4">Join Top Companies</h4>
+                        <p>If you're interested in one of our open positions, start by applying here and attaching your
+                            resume.</p>
+                    </div>
+                    <div class="w-full md:w-1/2 z-20">
+                        <form class="flex flex-col gap-6">
+                            <h4 class="text-3xl font-semibold tracking-tighter py-2">Apply Now</h4>
+                            <input type="text" name="name"
+                                class="bg-halftone/10 border-2 border-halftone/40 focus:border-halftone outline-0 transition tracking-tighter duration-300 ease-in-out p-2 rounded-sm placeholder-halftone/60"
+                                placeholder="Name">
+                            <input type="email" name="email"
+                                class="bg-halftone/10 border-2 border-halftone/40 focus:border-halftone outline-0 transition tracking-tighter duration-300 ease-in-out p-2 rounded-sm placeholder-halftone/60"
+                                placeholder="Email">
+                            <input type="tel" name="phone"
+                                class="bg-halftone/10 border-2 border-halftone/40 focus:border-halftone outline-0 transition tracking-tighter duration-300 ease-in-out p-2 rounded-sm placeholder-halftone/60"
+                                placeholder="Phone">
+                            <textarea name="message"
+                                class="bg-halftone/10 border-2 border-halftone/40 focus:border-halftone outline-0 transition tracking-tighter duration-300 ease-in-out p-2 rounded-sm placeholder-halftone/60"
+                                placeholder="Message"></textarea>
+                            <label for="resume"
+                                class="cursor-pointer text-halftone/80 hover:text-halftone transition tracking-tighter duration-300 ease-in-out"><i
+                                    class="far fa-paperclip"></i> Attach Resume</label>
+                            <input type="file" name="resume" id="resume" class="hidden">
+                            <input type="submit" name="submit" value="Submit Application"
+                                class="bg-white/90 transition cursor-pointer duration-300 tracking-tighter ease-in-out hover:bg-white outline-0 p-2 rounded-sm text-secondary"
+                                placeholder="Phone">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="snap-start">
+            <div class="min-h-screen px-8 py-16 md:px-40 flex flex-col justify-center items-center">
+                <div class="py-8 text-center flex flex-col items-center w-full relative">
+                    <span
+                        class="absolute top-0 -left-8 md:-left-40 text-center uppercase font-black tracking-wider text-halftone/40 text-9xl z-10 w-screen overflow-hidden">contact
+                        us</span>
+                    <h2 class="text-5xl font-extrabold tracking-tighter pb-2 z-20">Contact Us</h2>
+                    <p class="text-[#444445] pb-6 z-20">Get in touch with us for collaboration</p>
+                    <ul
+                        class="text-left self-center rounded-lg bg-white border-2 z-20 border-secondary/30 md:w-3/5 md:px-12 p-6 text-sm md:text-md">
+                        <span class="text-sm text-primary/50 tracking-widest">NEWSTAR CONSULTING OFFICE</span>
+                        <h1 class="text-3xl font-poppins font-bold pt-2 pb-8">New Delhi, India</h1>
+                        <li class="flex items-center gap-3 py-2">
+                            <div
+                                class="h-10 w-10 rounded-full bg-secondary/20 flex items-center justify-center flex-none text-primary">
+                                <i class="fas fa-phone"></i></div> +91 98104 23335
+                        </li>
+                        <li class="flex items-center gap-3 py-2">
+                            <div
+                                class="h-10 w-10 rounded-full bg-secondary/20 flex items-center justify-center flex-none text-primary">
+                                <i class="fas fa-envelope"></i></div> response@newstarconsulting.in
+                        </li>
+                        <li class="flex items-center gap-3 py-2">
+                            <div
+                                class="h-10 w-10 rounded-full bg-secondary/20 flex items-center justify-center flex-none text-primary">
+                                <i class="fas fa-map"></i></div> Second Floor,40-B,Corner Market, Malviya Nagar, Delhi
+                            110017, IN
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer" class="snap-end">
+            <div class="px-8 py-12 md:px-40 bg-secondary text-white">
+                <div
+                    class="text-sm border-b-2 border-white/50 top-0 inline-x flex justify-between items-center px-8 py-3">
+                    <a href="index.html"
+                        class="text-2xl tracking-tighter font-bold underline underline-offset-2 decoration-transparent hover:decoration-white/50 transition ease-all">Newstar
+                        Consulting</a>
+                    <div class="flex gap-2">
+                        <a href="https://www.linkedin.com/company/newstar-consulting/"
+                            class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white hover:border-transparent hover:bg-white hover:text-secondary transition ease-all">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white hover:border-transparent hover:bg-white hover:text-secondary transition ease-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white hover:border-transparent hover:bg-white hover:text-secondary transition ease-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="text-sm text-center pt-4">Copyright © 2023 Newstar Consulting Pvt Ltd - All Rights Reserved.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="scroll.js"></script>
     <script src="fontawesome.js" async defer></script>
+
 </body>
 
 </html>
