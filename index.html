@@ -30,39 +30,13 @@
         #progress-bar::before {
             width: var(--progress);
         }
-
-        .custom-shape-divider-bottom-1689506787 {
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            transform: rotate(180deg);
-            z-index: 20;
-        }
-
-        .custom-shape-divider-bottom-1689506787 svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 75px;
-        }
-
-        .custom-shape-divider-bottom-1689506787 .shape-fill {
-            fill: #FFFFFF;
-        }
-
-        .bg-hero-bg {
-            background-image: radial-gradient(#A9D9D0, transparent 70%);
-        }
     </style>
 </head>
 
 <body>
 
-    <div class="font-inter text-sm w-full z-30 fixed bg-transparent top-0 inline-x text-light transition duration-300 ease-in-out" id="navbar">
-        <nav class="flex justify-between items-center px-8 py-3">
+    <div class="font-inter text-sm w-full z-30 fixed bg-transparent top-0 inline-x text-dark transition duration-300 ease-in-out" id="navbar">
+        <nav class="flex justify-between items-center md:px-16 px-8 py-4 transition duration-100 ease-in-out">
             <a href="#home"
                 class="text-2xl tracking-tighter font-bold underline underline-offset-2 decoration-transparent hover:decoration-halftone transition ease-all">Newstar
                 Consulting</a>
@@ -70,17 +44,13 @@
                 <a href="#home"
                     class="underline underline-offset-2 decoration-transparent hover:decoration-halftone transition ease-all">Home</a>
                 <a href="#about"
-                    class="underline underline-offset-2 decoration-transparent hover:decoration-halftone transition ease-all">About
-                    Us</a>
+                    class="underline underline-offset-2 decoration-transparent hover:decoration-halftone transition ease-all">About Us</a>
                 <a href="#specialities"
-                    class="underline underline-offset-2 decoration-transparent hover:decoration-halftone transition ease-all">Our
-                    Specialities</a>
+                    class="underline underline-offset-2 decoration-transparent hover:decoration-halftone transition ease-all">Our Specialities</a>
                 <a href="#services"
-                    class="underline underline-offset-2 decoration-transparent hover:decoration-halftone transition ease-all">Our
-                    Services</a>
+                    class="underline underline-offset-2 decoration-transparent hover:decoration-halftone transition ease-all">Our Services</a>
                 <a href="#contact"
-                    class="underline underline-offset-2 decoration-transparent hover:decoration-halftone transition ease-all">Contact
-                    Us</a>
+                    class="underline underline-offset-2 decoration-transparent hover:decoration-halftone transition ease-all">Contact Us</a>
             </div>
             <div class="flex gap-2">
                 <a href="https://www.linkedin.com/company/newstar-consulting/"
@@ -106,34 +76,15 @@
         class="font-inter text-dark bg-light h-screen overflow-y-scroll overflow-x-hidden md:snap-y snap-proximity scroll-smooth">
 
         <section id='home' class='snap-center'>
-            <div class="min-h-[98vh] flex flex-col justify-center items-center px-8 md:px-40 py-24 relative bg-dark text-light">
-                <div class="custom-shape-divider-bottom-1689506787">
-                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-                    </svg>
-                </div>
-                <video nocontrols autoplay muted loop
-                    class="h-[98vh] w-screen z-10 object-cover absolute top-0 left-0 opacity-20" id="hero-vid">
-                    <source src="lib/hero-vid.mp4">
-                </video>
+            <div class="min-h-screen flex flex-col justify-center items-center px-8 md:px-40 py-24 relative bg-[url('lib/heroBg.svg')] bg-cover bg-center text-dark">    
                 <div class="z-20 text-center">
-                    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter underline underline-offset-4 decoration-halftone">
-                        Newstar Consulting</h1>
-                    <h3 class="text-3xl md:text-4xl font-bold tracking-tighter py-4">We are in People Business</h3>
-                    <div class="flex flex-col md:flex-row gap-6 md:gap-1.5">
-                        <div>
-                            <a class="border-2 text-gray-300 border-gray-300 rounded-full p-2 px-4 transition my-4 duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-light"
-                                href="#about">About Us</a>
-                            <a class="border-2 text-gray-300 border-gray-300 rounded-full p-2 px-4 transition my-4 duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-light"
-                                href="#specialities">Our Specialities</a>
-                        </div>
-                        <div>
-                            <a class="border-2 text-gray-300 border-gray-300 rounded-full p-2 px-4 transition my-4 duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-light"
-                                href="#services">Our Services</a>
-                            <a class="border-2 text-gray-300 border-gray-300 rounded-full p-2 px-4 transition my-4 duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-light"
-                                href="#contact">Contact Us</a>
-                        </div>
+                    <div class="pb-6">
+                        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter">
+                            Newstar Consulting</h1>
+                        <h3 class="text-xl md:text-2xl font-bold tracking-tighter py-4">We are in People Business</h3>
                     </div>
+                    <a class="border-2 text-dark w-max bg-light border-[#58585a] rounded-md uppercase py-3 px-6 transition duration-300 ease-in-out hover:border-dark hover:text-dark"
+                        href="#about">Explore Now <i class="far fa-long-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -147,7 +98,7 @@
                     <div class="w-full md:w-3/5 z-20">
                         <h2 class="text-5xl font-extrabold tracking-tighter pb-2">About Us</h2>
                         <h4 class="text-3xl font-semibold tracking-tighter py-4">Helping Businesses grow since 1997</h4>
-                        <p class="text-[#444445]">We are a team of dedicated professionals who are committed to helping
+                        <p class="text-dark">We are a team of dedicated professionals who are committed to helping
                             businesses find the best talent to meet their needs. Our mission is to match skilled and
                             qualified candidates with employers who are seeking top talent to grow their businesses.
                             <br><br>
@@ -176,7 +127,7 @@
                 <div class="flex flex-col py-6 md:flex-row gap-8 items-center">
                     <h1 class="md:w-2/5 font-semibold text-3xl tracking-tighter">Helping you solve your staffing and
                         workforce challenges.</h1>
-                    <p class="text-[#444445] md:w-3/5">
+                    <p class="text-dark md:w-3/5">
                         In today's fast-paced business world, staffing and workforce challenges can be a major obstacle
                         for companies of all sizes. Whether you're struggling with recruitment, retention, or employee
                         productivity, it can be difficult to find the right solutions to your staffing needs.
@@ -200,87 +151,87 @@
                     We specialize in a wide range of industries:
                 </p>
 
-                <div class="w-full flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2 md:px-32 z-20">
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-desktop text-2xl py-1"></i>
+                <div class="w-full flex flex-col md:flex-row gap-4 text-[#333] cursor-pointer justify-center py-2 md:px-32 z-20">
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-desktop text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
-                        Information Technology
+                        <span>Information Technology</span>
                     </div>
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-money-bill-wave text-2xl py-1"></i>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-money-bill-wave text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
                         Finance and Accounting
                     </div>
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-cogs text-2xl py-1"></i>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-cogs text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
                         Engineering
                     </div>
                 </div>
-                <div class="w-full flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2 md:px-32">
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-cash-register text-2xl py-1"></i>
+                <div class="w-full flex flex-col md:flex-row gap-4 text-[#333] cursor-pointer justify-center py-2 md:px-32">
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-cash-register text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
                         Sales & Marketing
                     </div>
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-users text-2xl py-1"></i>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-users text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
                         Human Resources
                     </div>
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-stethoscope text-2xl py-1"></i>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-stethoscope text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
                         Healthcare
                     </div>
                 </div>
-                <div class="w-full flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2 md:px-32">
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-books text-2xl py-1"></i>
+                <div class="w-full flex flex-col md:flex-row gap-4 text-[#333] cursor-pointer justify-center py-2 md:px-32">
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-books text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
                         Education
                     </div>
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-store text-2xl py-1"></i>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-store text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
                         E-commerce
                     </div>
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-car-side text-2xl py-1"></i>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-car-side text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
                         Automobile
                     </div>
                 </div>
-                <div class="w-full flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2 md:px-32">
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-building text-2xl py-1"></i>
+                <div class="w-full flex flex-col md:flex-row gap-4 text-[#333] cursor-pointer justify-center py-2 md:px-32">
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-building text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
                         Infrastructure
                     </div>
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-user text-2xl py-1"></i>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-user text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
                         Life sciences & Healthcare
                     </div>
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-film text-2xl py-1"></i>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-film text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
                         Media & Advertising
                     </div>
                 </div>
-                <div class="w-full flex flex-col md:flex-row gap-4 text-[#444445] justify-center py-2 md:px-32">
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-info-circle text-2xl py-1"></i>
+                <div class="w-full flex flex-col md:flex-row gap-4 text-[#333] cursor-pointer justify-center py-2 md:px-32">
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-info-circle text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
                         Retail
                     </div>
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-plug text-2xl py-1"></i>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-plug text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
                         Power & Energy
                     </div>
-                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center">
-                        <i class="fas fa-shopping-cart text-2xl py-1"></i>
+                    <div class="rounded-md p-4 px-6 bg-white flex-1 shadow-md shadow-primary/30 text-center group underline underline-offset-2 decoration-transparent">
+                        <i class="fas fa-shopping-cart text-2xl py-1 group-hover:text-black transition duration-300 ease-in-out"></i>
                         <br>
                         FMCG
                     </div>
@@ -297,7 +248,7 @@
                 <div class="flex flex-col md:flex-row gap-12 items-center py-6">
                     <div class="flex-1">
                         <h1 class="font-bold tracking-tighter text-4xl">Permanent Hiring</h1>
-                        <p class="py-4 text-[#444445]">
+                        <p class="py-4 text-dark">
                             Looking for a long-term solution to your hiring needs? <br><br>
                             Our permanent hiring solutions are designed to help you find the best talent for your
                             organization, without the hassle of going through the recruitment process yourself. <br><br>
@@ -314,7 +265,7 @@
                 <div class="flex flex-col md:flex-row-reverse gap-12 items-center py-6">
                     <div class="flex-1">
                         <h1 class="font-bold tracking-tighter text-4xl">Recruitment Process Outsourcing</h1>
-                        <p class="py-4 text-[#444445]">
+                        <p class="py-4 text-dark">
                             Recruitment can be a challenging task for any organization, especially when they have to
                             compete with other companies to attract and retain top talent. That's where our RPO service
                             comes in. Our RPO service involves us becoming an extension of your HR team, providing you
@@ -331,7 +282,7 @@
                 <div class="flex flex-col md:flex-row gap-12 items-center py-6">
                     <div class="flex-1">
                         <h1 class="font-bold tracking-tighter text-4xl">Vendor On Premise</h1>
-                        <p class="py-4 text-[#444445]">
+                        <p class="py-4 text-dark">
                             A vendor on premise (VOP) is a service in which we provide a recruiter who works on-site at
                             your location to manage your hiring needs. VOP is an attractive option for organizations
                             that require streamlining their recruitment process. Our VOP services can be a valuable
@@ -348,7 +299,7 @@
                 <div class="flex flex-col md:flex-row-reverse gap-12 items-center py-6">
                     <div class="flex-1">
                         <h1 class="font-bold tracking-tighter text-4xl">Executive Search</h1>
-                        <p class="py-4 text-[#444445]">
+                        <p class="py-4 text-dark">
                             Executive search is a specialized recruitment service that focuses on identifying and
                             recruiting top-level executives for organizations. At its core, executive search is about
                             finding the right candidate with the right skillset and experience to lead an organization
@@ -366,7 +317,7 @@
                 <div class="flex flex-col md:flex-row gap-12 items-center py-6">
                     <div class="flex-1">
                         <h1 class="font-bold tracking-tighter text-4xl">Employers</h1>
-                        <p class="py-4 text-[#444445]">If you are an employer looking to find top talent, we invite you
+                        <p class="py-4 text-dark">If you are an employer looking to find top talent, we invite you
                             to connect with us. Let us help you achieve your goals and take your business to the next
                             level.<br><br>
                             Contact us today to learn more about our services and how we can help you succeed.</p>
@@ -381,7 +332,7 @@
                 <div class="flex flex-col md:flex-row-reverse gap-12 items-center py-6">
                     <div class="flex-1">
                         <h1 class="font-bold tracking-tighter text-4xl">Job Seekers</h1>
-                        <p class="py-4 text-[#444445]">For job seekers, we offer a personalized approach to finding
+                        <p class="py-4 text-dark">For job seekers, we offer a personalized approach to finding
                             their next career opportunity. We take the time to understand their skills, experience, and
                             career
                             goals, and we match them with job openings that align with their interests and strengths. We
@@ -417,23 +368,23 @@
                         <form class="flex flex-col gap-6">
                             <h4 class="text-3xl font-semibold tracking-tighter py-2">Apply Now</h4>
                             <input type="text" name="name"
-                                class="bg-halftone/10 border-2 border-halftone/40 focus:border-halftone outline-0 transition tracking-tighter duration-300 ease-in-out p-2 rounded-sm placeholder-halftone/60"
+                                class="bg-halftone/10 border-2 border-halftone/40 focus:border-halftone outline-0 transition tracking-tighter duration-300 ease-in-out p-2 rounded-md placeholder-halftone/60"
                                 placeholder="Name">
                             <input type="email" name="email"
-                                class="bg-halftone/10 border-2 border-halftone/40 focus:border-halftone outline-0 transition tracking-tighter duration-300 ease-in-out p-2 rounded-sm placeholder-halftone/60"
+                                class="bg-halftone/10 border-2 border-halftone/40 focus:border-halftone outline-0 transition tracking-tighter duration-300 ease-in-out p-2 rounded-md placeholder-halftone/60"
                                 placeholder="Email">
                             <input type="tel" name="phone"
-                                class="bg-halftone/10 border-2 border-halftone/40 focus:border-halftone outline-0 transition tracking-tighter duration-300 ease-in-out p-2 rounded-sm placeholder-halftone/60"
+                                class="bg-halftone/10 border-2 border-halftone/40 focus:border-halftone outline-0 transition tracking-tighter duration-300 ease-in-out p-2 rounded-md placeholder-halftone/60"
                                 placeholder="Phone">
                             <textarea name="message"
-                                class="bg-halftone/10 border-2 border-halftone/40 focus:border-halftone outline-0 transition tracking-tighter duration-300 ease-in-out p-2 rounded-sm placeholder-halftone/60"
+                                class="bg-halftone/10 border-2 border-halftone/40 focus:border-halftone outline-0 transition tracking-tighter duration-300 ease-in-out p-2 rounded-md placeholder-halftone/60"
                                 placeholder="Message"></textarea>
                             <label for="resume"
                                 class="cursor-pointer text-halftone/80 hover:text-halftone transition tracking-tighter duration-300 ease-in-out"><i
                                     class="far fa-paperclip"></i> Attach Resume</label>
                             <input type="file" name="resume" id="resume" class="hidden">
                             <input type="submit" name="submit" value="Submit Application"
-                                class="bg-white/90 transition cursor-pointer duration-300 tracking-tighter ease-in-out hover:bg-white outline-0 p-2 rounded-sm text-secondary"
+                                class="bg-white/90 transition cursor-pointer duration-300 tracking-tighter ease-in-out hover:bg-white outline-0 p-2 rounded-md uppercase text-sm text-secondary"
                                 placeholder="Phone">
                         </form>
                     </div>
@@ -448,7 +399,7 @@
                         class="absolute top-0 -left-8 md:-left-40 text-center uppercase font-black tracking-wider text-halftone/40 text-9xl z-10 w-screen overflow-hidden">contact
                         us</span>
                     <h2 class="text-5xl font-extrabold tracking-tighter pb-2 z-20">Contact Us</h2>
-                    <p class="text-[#444445] pb-6 z-20">Get in touch with us for collaboration</p>
+                    <p class="text-dark pb-6 z-20">Get in touch with us for collaboration</p>
                     <ul
                         class="text-left self-center rounded-lg bg-white border-2 z-20 border-secondary/30 md:w-3/5 md:px-12 p-6 text-sm md:text-md">
                         <span class="text-sm text-primary/50 tracking-widest">NEWSTAR CONSULTING OFFICE</span>
