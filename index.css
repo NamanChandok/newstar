@@ -1,0 +1,23 @@
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.side-nav-toggle {
+    z-index: 100;
+    width: 1.75rem;
+    aspect-ratio: 1;
+    background: url("lib/menu.svg");
+    border: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#side-nav[data-visible="true"] {
+    transform: translateY(0%);
+}
+
+.side-nav-toggle[aria-expanded="true"] {
+    background: url("lib/close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
